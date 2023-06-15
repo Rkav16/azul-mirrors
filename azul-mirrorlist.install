@@ -1,0 +1,10 @@
+post_install() {
+post_upgrade
+}
+
+post_upgrade() {
+rm /etc/pacman.d/azul-mirrorlist
+cp /etc/pacman.d/azul-mirrorlist-new /etc/pacman.d/azul-mirrorlist
+rm /etc/pacman.d/azul-mirrorlist-new
+}
+
